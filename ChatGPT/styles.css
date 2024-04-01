@@ -1,0 +1,145 @@
+*{
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #343541;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    border-bottom: 3px solid #5c5c66;
+}
+
+.namaAplikasi{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container{
+    max-width: 920px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.informasi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 15;
+    
+}
+
+.creator{
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.8s ease;
+    color:#fff;
+}
+
+.promptUser{
+    background-color: #343541;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #5c5c66;
+    position: sticky;
+    bottom: 0;
+}
+
+#userPrompt{
+    background-color: #40414f;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 10;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+#userPrompt::placeholder{
+    color: #8e8e8e;
+    font-weight: 400;
+}
+
+#tombolKirim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-left:15px;
+    transition: all 0.6s ease;
+}
+
+#tombolKirim:hover{
+    color: #fff;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+.ruangChat{
+    flex: 1;
+}
+
+.kotakobrolan{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+#riwayatChat{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#riwayatChat i{
+    color: #fff;
+    border-radius: 5px;
+}
+
+.system, .user{
+    display: flex;
+    align-items: flex-start;
+    color: #eee;
+    width: 100%;
+    padding: 15px 7px 15px 10px;
+    border-radius: 6px;
+}
+
+.user{
+    justify-content: flex-end;
+    background-color: #53587a;
+}
+
+.system{
+    background-color: #444654;
+}
+
+#riwayatChat #user-icon i{
+    background-color: #19c37d;
+    padding: 10px 11px;
+    margin-left: 10px;
+}
+
+#riwayatChat #bot-icon i{
+    background-color: #9859b7;
+    padding: 10px 8px 11px;
+    margin-right: 10px;
+}

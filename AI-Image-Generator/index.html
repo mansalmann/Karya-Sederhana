@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator by Salman</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+      <div class="container">
+        <h1>AI Image Generator by Salman</h1>
+        <p>Masukkan prompt dalam bentuk tulisan yang ingin di-generate menjadi gambar oleh AI.</p>
+        <form class="generator-form">
+            <input type="text" id="prompt" autocomplete="off" placeholder="Ketikkan prompt di sini...">
+            <button type="button" id="tombolGenerator">
+                Generate
+            </button>
+        </form>
+
+        <div class="hasilGenerate">
+            <div id="memuatHasil">Generating...</div>
+            <div id="hasilGambar"></div>
+        </div>
+
+        <p class="pesan">Dibuat menggunakan stable-diffusion v.1.5</p>
+      </div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
