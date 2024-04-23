@@ -40,7 +40,7 @@ body{
     width: 100%;
     height: 50px;
     color: #000;
-    background: none;
+    background: #eee;
     font-size: 1.05rem;
     font-weight: 500;
     border-radius: 5px;
@@ -66,6 +66,7 @@ body{
     height: 4px;
     position: relative;
     margin-top: 0.75rem;
+    margin-bottom: 1.7rem;
     border-radius: 25px;
 }
 
@@ -75,21 +76,24 @@ body{
     height: 100%;
     width: 50%;
     border-radius: inherit;
-    transition: width 0.3s ease;
+    transition: width 1.2s ease;
 }
 
 .password-indicator#weak::before{
     width: 20%;
+    content: "lemah";
     background: #e64a4a;
 }
 
 .password-indicator#medium::before{
     width: 50%;
+    content: "medium";
     background: #f1c80b;
 }
 
 .password-indicator#strong::before{
     width: 100%;
+    content: "kuat";
     background: #43a047;
 }
 
@@ -117,7 +121,7 @@ body{
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    width: calc(100%/2);
+    width: 50%;
 }
 
 .options .option:first-child{
@@ -150,6 +154,6 @@ body{
     background-color: #43a047;
     font-size: 1.02rem;
     padding: 0.6rem 0; 
-    margin: 0.94rem 0 1.3rem;
+    margin: 0.80rem 0 1.3rem;
 }
 

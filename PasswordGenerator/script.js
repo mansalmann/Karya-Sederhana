@@ -23,6 +23,7 @@ const generatePassword = function(){
         if(option.checked){
             if(option.id !== "no-duplicate" && option.id !== "spaces"){
                 staticPassword += characters[option.id];
+                console.log(option.id)
             }else if(option.id === "spaces"){
                 staticPassword += `  ${staticPassword}  `;
             }else{
@@ -31,9 +32,11 @@ const generatePassword = function(){
         }
     });
 
-    // generate character in password
+    // generate character for password
     for(let i = 0; i < passwordLength; i++){
         let randomCharacters = staticPassword[Math.floor(Math.random() * staticPassword.length)];
+        
+        // check for duplicate characters
         if(noDuplicate){
             !randomPassword.includes(randomCharacters) || randomCharacters == " " ? randomPassword += randomCharacters : i--;
         }else{
@@ -48,7 +51,7 @@ const UpdatePasswordIndicator = function(){
 }
 
 const updateSlider = function(){
-    document.querySelector(".password-length span").innerText = slider.value;
+    document.querySelector(".details span").innerText = slider.value;
     generatePassword();
     UpdatePasswordIndicator();
 }
