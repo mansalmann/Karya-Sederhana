@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon rounded dari googlefonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <!-- style css -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Generator by Salman</title>
+    <!-- font Poppins dari goolglefonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head> 
+<body>
+
+    <div class="container">
+        <h2>Password Generator by Salman</h2>
+        <div class="content-wrapper">
+            <div class="input-password">
+                <input type="text" disabled>
+                <span class="material-symbols-rounded">copy_all</span>
+            </div>
+
+            <div class="password-indicator"></div>
+                <div class="password-length">
+                    <div class="details">
+                        <label class="length">Panjang Password</label>
+                        <span></span>
+                    </div>
+                    <input type="range" min="1" max="30" value="15" step="1">
+                </div>
+
+                <div class="password-settings">
+                    <label class="settings">Pengaturan Password</label>
+                    <ul class="options">
+                        <li class="option" type="none">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Huruf kecil (a-z)</label>
+                        </li>
+                        <li class="option" type="none">
+                            <input type="checkbox" id="uppercase">
+                            <label for="uppercase">Huruf besar (A-Z)</label>
+                        </li>
+                        <li class="option" type="none">
+                            <input type="checkbox" id="numbers">
+                            <label for="numbers">Angka (0-9)</label>
+                        </li>
+                        <li class="option" type="none">
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Simbol (!$%#)</label>
+                        </li>
+                        <li class="option" type="none">
+                            <input type="checkbox" id="no-duplicate">
+                            <label for="no-duplicate">Hindari duplikat</label>
+                        </li>
+                        <li class="option" type="none">
+                            <input type="checkbox" id="spaces">
+                            <label for="spaces">Spasi</label>
+                        </li>
+                    </ul>
+                </div>
+                <button class="generate_password">Buat Password</button>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

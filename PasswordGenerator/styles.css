@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:#c4c1c1;
+}
+
+.container{
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+}
+
+.container h2{
+    font-weight: 800;
+    font-size: 1.31rem;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+}
+
+.content-wrapper{
+    margin: 1.25rem 1.75rem;
+}
+
+.content-wrapper .input-password{
+    position: relative;
+}
+
+.input-password input{
+    width: 100%;
+    height: 50px;
+    color: #000;
+    background: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1.3px;
+    border: 2px solid #aaa;
+    padding: 0 2.85rem 0 1rem;
+}
+
+.input-password span{
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: #707070;
+}
+
+.input-password span:hover{
+    color: #43A047 !important;
+}
+
+.content-wrapper .password-indicator{
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-top: 0.75rem;
+    border-radius: 25px;
+}
+
+.password-indicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.password-indicator#weak::before{
+    width: 20%;
+    background: #e64a4a;
+}
+
+.password-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+
+.password-indicator#strong::before{
+    width: 100%;
+    background: #43a047;
+}
+
+.content-wrapper .password-length{
+    margin: 1.56rem 0 1.25rem;
+}
+
+.password-length .details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-length input{
+    width: 100%;
+    height: 20px;
+}
+
+.password-settings .options{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.password-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100%/2);
+}
+
+.options .option:first-child{
+    pointer-events: none;
+}
+
+.options .option:first-child input{
+    opacity: 0.7
+}
+
+.options .option input{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.options .option label{
+    cursor: pointer;
+    color: #4f4f4f;
+    padding-left: 0.63rem;
+}
+
+.content-wrapper .generate_password{
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #43a047;
+    font-size: 1.02rem;
+    padding: 0.6rem 0; 
+    margin: 0.94rem 0 1.3rem;
+}
+
