@@ -67,7 +67,7 @@ body{
     color: #43A047 !important;
 }
 
-.content-wrapper .password-indicator{
+.password-indicator{
     width: 100%;
     height: 4px;
     position: relative;
@@ -163,3 +163,6 @@ body{
     margin: 0.80rem 0 1.3rem;
 }
 
+.info{
+    font-size: small;
+}

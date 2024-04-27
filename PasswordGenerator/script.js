@@ -14,31 +14,32 @@ const characters = {
 }
 
 const generatePassword = function(){
-    let staticPassword = "";
+    let staticPassword = ""; // menyiapkan daftar karakter yang dapat digunakan
     let randomPassword = "";
-    let noDuplicate = false;
+    let noDuplicate = false; 
     let passwordLength = slider.value;
 
     options.forEach(option => {
         if(option.checked){
-            if(option.id !== "no-duplicate" && option.id !== "spaces"){
+            if(option.id !== "no-duplicate"){
                 staticPassword += characters[option.id];
-                console.log(option.id)
-            }else if(option.id === "spaces"){
-                staticPassword += `  ${staticPassword}  `;
-            }else{
+            }else{ 
                 noDuplicate = true;
             }
         }
     });
 
-    // generate character for password
+    // men-generate password berdasarkan nilai pada static password
     for(let i = 0; i < passwordLength; i++){
         let randomCharacters = staticPassword[Math.floor(Math.random() * staticPassword.length)];
         
-        // check for duplicate characters
+        // cek jika ada karakter yang sama
         if(noDuplicate){
-            !randomPassword.includes(randomCharacters) || randomCharacters == " " ? randomPassword += randomCharacters : i--;
+            if(!randomPassword.includes(randomCharacters)){
+                randomPassword += randomCharacters;
+            }else{
+                i--;
+            }
         }else{
             randomPassword += randomCharacters;
         }
@@ -47,9 +48,17 @@ const generatePassword = function(){
 }
 
 const UpdatePasswordIndicator = function(){
-    passwordIndicator.id = slider.value <= 8 ? "weak" : slider.value <= 16 ? "medium" : "strong";
+    if(slider.value <= 6){
+        passwordIndicator.id = "weak";
+    }else if(slider.value <= 14){
+        passwordIndicator.id = "medium";
+    }
+    else if((options[1].checked || options[2].checked || options[3].checked) && (slider.value > 14)){
+        passwordIndicator.id = "strong";
+    }
 }
 
+// jika nilai slider berubah, maka akan secara otomatis men-generate password baru
 const updateSlider = function(){
     document.querySelector(".details span").innerText = slider.value;
     generatePassword();
@@ -57,8 +66,9 @@ const updateSlider = function(){
 }
 updateSlider();
 
+// untuk men-copy password yang sudah digenerate
 const copyPassword = function(){
-    navigator.clipboard.writeText(password.value);
+    window.navigator.clipboard.writeText(password.value);
     copyText.innerText = "check";
     copyText.style.color = "#4285f4";
     setTimeout(()=>{
