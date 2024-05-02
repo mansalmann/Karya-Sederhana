@@ -84,7 +84,7 @@ async function createMovieCard(movie){
                     <div class="card-header">
                         <div class="left-content">
                             <h3 style="font-weight:600">${truncatedTitle}</h3>
-                            <span style="color: #12efec">${date}</span>
+                            <span style="color: #12efec">${formattedDate}</span>
                         </div>
                         <div class="right-content">
                             <a href="https://www.imdb.com/title/${movieData.imdbID}" target="_blank" class="card-btn">See IMDB</a>
