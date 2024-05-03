@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c78150c242.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Budget App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+
+                <div class="total-amount">
+                    <h3>Pemasukan</h3>
+                    <p class="hide error" id="budget-error">
+                        Jenis kategori atau nilai pemasukan tidak bisa kosong atau negatif.
+                    </p>
+                    <input type="text" class="user-budget" id="budget-category" placeholder="Masukkan jenis kategori pemasukan...">
+                    <input type="number" id="budget-value" placeholder="Masukkan jumlah pemasukan">
+                    <button class="submit" id="budget-button">Submit</button>
+                </div>
+
+                <div class="user-amount">
+                    <h3>Pengeluaran</h3>
+                    <p class="hide error" id="category-error">
+                        Jenis kategori uang keluar tidak bisa kosong.
+                    </p>
+                    <input type="text" class="user-expenses" id="category" placeholder="Masukkan jenis kategori pengeluaran...">
+                    <input type="number" id="expenses-value" placeholder="Masukkan jumlah pengeluaran">
+                    <button class="submit" id="expenses-button">Submit</button>
+                </div>
+            </div>
+
+            <div class="money-summary-container flex-space">
+                <div>
+                    <p>Total Pemasukan</p>
+                    <span class="idr">Rp.</span>
+                    <span id="total-budget">0</span>
+                </div>
+                <div>
+                    <p>Total Pengeluaran</p>
+                    <span class="idr">Rp.</span>
+                    <span id="total-expenses">0</span>
+                </div>
+                <div>
+                    <p>Total Saldo Akhir</p>
+                    <span class="idr">Rp.</span>
+                    <span id="total-balance">0</span>
+                </div>
+            </div>
+        </div>
+
+            <div class="list">
+                <h3>Log Aktivitas Keuangan</h3>
+                <div class="list-container" id="list">
+                    <div class="empty-data">
+                        <h4 class="info">Data pemasukan atau pengeluaran masih kosong</h4>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
