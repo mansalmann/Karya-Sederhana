@@ -101,8 +101,8 @@ async function fetchDataMusic(){
                         break;
                     }
                 }             
-                musicIndex = musicIndexAfter;
-                loadMusic(songs[musicIndexAfter]);
+                musicIndex = parseInt(musicIndexAfter);
+                loadMusic(songs[musicIndex]);
             }else{
                 if(repeatButton.classList.contains("repeat-active")){
                     music.loop = true;
@@ -129,8 +129,8 @@ async function fetchDataMusic(){
                         break;
                     }
                 }             
-                musicIndex = musicIndexAfter;
-                loadMusic(songs[musicIndexAfter]);
+                musicIndex = parseInt(musicIndexAfter);
+                loadMusic(songs[musicIndex]);
             }else{
                 if(repeatButton.classList.contains("repeat-active")){
                     music.loop = true;
