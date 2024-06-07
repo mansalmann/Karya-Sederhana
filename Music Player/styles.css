@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+    min-height: 100vh;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #e7e7e7;
+    height: 550px;
+    width: 400px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    box-shadow: 
+    1px 1px 0px #a7a7a7,
+    2px 2px 0px #a7a7a7,
+    3px 3px 0px #a7a7a7,
+    4px 4px 0px #a7a7a7,
+    5px 5px 0px #a7a7a7,
+    6px 8px 0px #a7a7a7;
+}
+
+.player-img{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+
+.player-img img{
+    object-fit: fill;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    transition:  all 0.5s;
+    opacity: 1;
+}
+
+h2{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.player-progress{
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px 35px;
+    height: 7px;
+    width: 90%;
+}
+
+.progress{
+    background-color: #212121;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; 
+    transition: width 0.1s linear;
+}
+
+.music-duration{
+    position: relative;
+    top: -28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-controls{
+    position: relative;
+    top: -15px;
+    left: 15%;
+    width: 400px;
+}
+
+.fa-solid{
+    font-size: 30px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+}
+
+
+.fa-repeat, .fa-shuffle{
+    padding: 5px;
+    position: relative;
+    top: -4px;
+    font-size: 18px;
+    transition: padding 0.5s ease;
+}
+
+.repeat-active, .shuffle-active{
+    background-color: #a7a7a7;
+    border-radius: 50%;
+}
+
+.fa-play:hover, .fa-forward:hover, .fa-backward:hover{
+    filter: brightness(40%);
+}
+
+.fa-repeat:hover, .fa-shuffle:hover{
+    filter: brightness(75%);
+}
+
+.play-button{
+    position: relative;
+    top: 3px;
+    font-size: 44px;
+}
+
+.circle{
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #666;
+    transition: all 0.1s linear;
+    top: -30px;
+    left: -8px;   
+}
+
+.addMusic p{
+    text-align: center;
+    cursor: pointer;
+}
+
+.addMusic a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #212121;
+}
+
+.addMusic a:hover{
+    text-decoration: underline;
+}
